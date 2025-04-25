@@ -24,11 +24,20 @@
       background-color: rgba(15, 23, 42, 0.8);
       padding: 15px 40px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 10;
       backdrop-filter: blur(8px);
+    }
+
+    nav img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
     }
 
     nav a {
@@ -48,17 +57,9 @@
       padding: 80px 20px 50px;
     }
 
-    .hero img {
-      width: 20px; 
-      height: 20px; 
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--accent);
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
-
     .hero h1 {
       font-size: 2.2em;
+      font-weight: bold;
       margin: 20px 0 8px;
     }
 
@@ -71,6 +72,7 @@
       background-color: var(--bg);
       color: var(--primary);
       padding: 60px 20px;
+      display: none;
     }
 
     section#profil h2 {
@@ -80,13 +82,23 @@
       color: var(--primary);
     }
 
-    section#profil .content {
-      text-align: center;
+    .profil-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 15px 40px;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1em;
     }
 
-    section#profil p {
-      font-size: 1.2em;
-      color: #d1d5db;
+    .profil-grid .label {
+      font-weight: bold;
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    .profil-grid .value {
+      text-align: left;
     }
 
     section#tugas {
@@ -149,39 +161,77 @@
       color: var(--accent);
     }
   </style>
+  <script>
+    function toggleProfil() {
+      const profilSection = document.getElementById('profil');
+      if (profilSection.style.display === 'none' || profilSection.style.display === '') {
+        profilSection.style.display = 'block';
+      } else {
+        profilSection.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
 
   <nav>
-    <a href="#profil">Profil</a>
+    <img src="PROFIL.jpg" alt="Foto Profil Elsa">
+    <a href="#">Beranda</a>
+    <a href="#" onclick="toggleProfil()">Profil</a>
     <a href="#tugas">Tugas</a>
   </nav>
 
+  <section class="hero">
+    <h1>PENDIDIKAN TEKNOLOGI INFORMASI</h1>
+    <h2>GRAFIKA KOMPUTER</h2> 
+  </section>
+
   <section id="profil">
-    <h2>Beranda Profil</h2>
-    <div class="content">
-      <img src="PROFIL.jpg" alt="Foto Profil Elsa">
-      <h1>Elsa Susanti</h1>
-      <p><strong>NPM:</strong> 2413025027</p>
-      <p><strong>Kelas:</strong> 2024A</p>
-      <p><strong>Program Studi:</strong> Pendidikan Teknologi Informasi</p>
-      <p><strong>Universitas:</strong> Uiversitas Lampung</p>
-      <p><strong>Alamat:</strong>Dusun VI Desa Tanjung Inten Kec. Purbolinggo Kab. Lampung Timur</p>
-      <p><strong>Tanggal Lahir:</strong> 15 Agustus 2006</p>
-      <p><strong>Email:</strong> susantielsa625@gmail.com</p>
-      <p><strong>Nomor HP:</strong> 085768152900]</p>
+    <h2 style="text-align: center;">DATA DIRI</h2>
+    <div style="max-width: 800px; margin: auto; padding-top: 30px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 1.1em;">
+        <tr>
+          <td style="font-weight: bold; padding: 10px; width: 30%;">Nama</td>
+          <td style="padding: 10px;">Elsa Susanti</td>
+        </tr>
+        <tr style="background-color: #f1f5f9;">
+          <td style="font-weight: bold; padding: 10px;">NPM</td>
+          <td style="padding: 10px;">2413025027</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 10px;">Kelas</td>
+          <td style="padding: 10px;">2024A</td>
+        </tr>
+        <tr style="background-color: #f1f5f9;">
+          <td style="font-weight: bold; padding: 10px;">Tanggal Lahir</td>
+          <td style="padding: 10px;">15 Agustus 2006</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 10px;">Email</td>
+          <td style="padding: 10px;">susantielsa625@gmail.com</td>
+        </tr>
+        <tr style="background-color: #f1f5f9;">
+          <td style="font-weight: bold; padding: 10px;">Nomor HP</td>
+          <td style="padding: 10px;">085768152900</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 10px;">Alamat</td>
+          <td style="padding: 10px;">Dusun VI Desa Tanjung Inten Kec. Purbolinggo Kab. Lampung Timur</td>
+        </tr>
+      </table>
     </div>
   </section>
 
   <section id="tugas">
-    <h2>Daftar Tugas Grafika Komputer</h2>
+    <h2>Daftar Tugas</h2>
     <div class="tugas-grid">
-
       <div class="card">
         <img src="https://quello.msu.edu/wp-content/uploads/2015/09/AMN3.jpg" alt="Tokoh Noll">
         <div class="content">
           <h3>Tokoh A. Michael Noll</h3>
-          <a href="#">Laporan</a> | <a href="#">PPT</a> | <a href="#">Video</a>
+          <a href="2413025027_Elsa Susanti_T1_GK_1.docx" download>Laporan (PDF)</a> |
+          <a href="2413025027_Elsa Susanti_T1_GK_PPT.pdf" download>PPT (PPTX)</a> |
+          <a href="https://drive.google.com/drive/folders/1H_vic3B8JPT1T7OOqvyYcA9aI3BaZPyu" download>Video (MP4)</a>
         </div>
       </div>
 
@@ -189,7 +239,8 @@
         <img src="GARIS_GK_1.png" alt="Garis">
         <div class="content">
           <h3>Algoritma Garis</h3>
-          <a href="#">Laporan</a> | <a href="#">Video</a>
+          <a href="2413025027_Elsa Susanti_T2_GK.docx" download>Laporan (PDF)</a> |
+          <a href="https://drive.google.com/drive/folders/1H_vic3B8JPT1T7OOqvyYcA9aI3BaZPyu" download>Video (MP4)</a>
         </div>
       </div>
 
@@ -197,7 +248,8 @@
         <img src="LINGKARAN_GK_2.png" alt="Lingkaran">
         <div class="content">
           <h3>Algoritma Lingkaran</h3>
-          <a href="#">Laporan</a> | <a href="#">Video</a>
+          <a href="2413025027_Elsa Susanti_T3_GK.docx" download>Laporan (PDF)</a> |
+          <a href="https://drive.google.com/drive/folders/1H_vic3B8JPT1T7OOqvyYcA9aI3BaZPyu" download>Video (MP4)</a>
         </div>
       </div>
 
@@ -205,10 +257,10 @@
         <img src="KURVA_GK_3.png" alt="Kurva">
         <div class="content">
           <h3>Kurva Bézier</h3>
-          <a href="#">Laporan</a> | <a href="#">Video</a>
+          <a href="2413025027_Elsa Susanti_4_GK.docx" download>Laporan (PDF)</a> |
+          <a href="https://drive.google.com/drive/folders/1H_vic3B8JPT1T7OOqvyYcA9aI3BaZPyu" download>Video (MP4)</a>
         </div>
       </div>
-
     </div>
   </section>
 
