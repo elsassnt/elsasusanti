@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Elsa Susanti</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #3b82f6;
+      --bg: #f9fafb;
+      --soft: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e3a8a);
+      color: var(--white);
+    }
+
+    nav {
+      background-color: rgba(15, 23, 42, 0.8);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: var(--white);
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 50px;
+    }
+
+    .hero img {
+      width: 20px; 
+      height: 20px; 
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .hero h1 {
+      font-size: 2.2em;
+      margin: 20px 0 8px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #d1d5db;
+    }
+
+    section#profil {
+      background-color: var(--bg);
+      color: var(--primary);
+      padding: 60px 20px;
+    }
+
+    section#profil h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    section#profil .content {
+      text-align: center;
+    }
+
+    section#profil p {
+      font-size: 1.2em;
+      color: #d1d5db;
+    }
+
+    section#tugas {
+      background-color: var(--bg);
+      color: var(--primary);
+      padding: 60px 20px;
+    }
+
+    section#tugas h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .tugas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card .content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--accent);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#tugas">Tugas</a>
+  </nav>
+
+  <section id="profil">
+    <h2>Beranda Profil</h2>
+    <div class="content">
+      <img src="PROFIL.jpg" alt="Foto Profil Elsa">
+      <h1>Elsa Susanti</h1>
+      <p><strong>NPM:</strong> 2413025027</p>
+      <p><strong>Kelas:</strong> 2024A</p>
+      <p><strong>Program Studi:</strong> Pendidikan Teknologi Informasi</p>
+      <p><strong>Universitas:</strong> Uiversitas Lampung</p>
+      <p><strong>Alamat:</strong>Dusun VI Desa Tanjung Inten Kec. Purbolinggo Kab. Lampung Timur</p>
+      <p><strong>Tanggal Lahir:</strong> 15 Agustus 2006</p>
+      <p><strong>Email:</strong> susantielsa625@gmail.com</p>
+      <p><strong>Nomor HP:</strong> 085768152900]</p>
+    </div>
+  </section>
+
+  <section id="tugas">
+    <h2>Daftar Tugas Grafika Komputer</h2>
+    <div class="tugas-grid">
+
+      <div class="card">
+        <img src="https://quello.msu.edu/wp-content/uploads/2015/09/AMN3.jpg" alt="Tokoh Noll">
+        <div class="content">
+          <h3>Tokoh A. Michael Noll</h3>
+          <a href="#">Laporan</a> | <a href="#">PPT</a> | <a href="#">Video</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="GARIS_GK_1.png" alt="Garis">
+        <div class="content">
+          <h3>Algoritma Garis</h3>
+          <a href="#">Laporan</a> | <a href="#">Video</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="LINGKARAN_GK_2.png" alt="Lingkaran">
+        <div class="content">
+          <h3>Algoritma Lingkaran</h3>
+          <a href="#">Laporan</a> | <a href="#">Video</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="KURVA_GK_3.png" alt="Kurva">
+        <div class="content">
+          <h3>Kurva Bézier</h3>
+          <a href="#">Laporan</a> | <a href="#">Video</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
